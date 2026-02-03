@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Activity Management</title>
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+  <div class="app">
+    <div class="content">
+      <!-- FORM BÊN TRÁI -->
+      <div class="form-area">
+        <label for="name">Fullname_Customer</label>
+        <input type="text" id="name">
+
+        <label for="id">Id_Pro</label>
+        <input type="text" id="id">
+
+        <label for="prdname">Name_Pro</label>
+        <input type="text" id="prdname">
+
+        <label for="qty">Quantity_Pro</label>
+        <input type="number" id="qty">
+
+        <label for="price">Price_Pro</label>
+        <input type="number" id="price">
+
+        <div class="btn-row">
+          <input type="button" value="Save" onclick="save()">
+          <input type="button" value="Show" onclick="show()">
+          <input type="button" value="Reset" onclick="resetForm()">
+        </div>
+
+        <div id="msg" class="msg"></div>
+      </div>
+
+      <!-- Khoảng trống bên phải như hình 1 -->
+      <div class="right-space"></div>
+    </div>
+
+    <!-- BẢNG HIỂN THỊ -->
+    <div class="table-wrap">
+      <table class="table-custom" border="1">
+        <thead>
+          <tr>
+            <th>Auto_Increment</th>
+            <th>Fullname_Customer</th>
+            <th>Id_Pro</th>
+            <th>Name_Pro</th>
+            <th>Quantity_Pro</th>
+            <th>Price_Pro</th>
+            <th>Discount</th>
+            <th>Amount</th>
+            <th>Total</th>
+          </tr>
+        </thead>
+        <tbody id="tbl">
+          <!-- Dữ liệu sẽ được thêm vào đây bởi JavaScript -->
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <script src="./js/script.js"></script>
+</body>
+</html>

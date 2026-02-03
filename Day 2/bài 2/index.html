@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shop DEBUG</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body onload="listProducts()">
+  <header class="header">
+    <div class="container-fluid">
+      <div class="row align-items-center">
+        <div class="col-3">
+          <div class="logo-section">
+            <img src="https://via.placeholder.com/60x60/FFD700/000000?text=👑" alt="Logo" class="logo-img">
+            <span class="shop-name">Shop DEBUG</span>
+          </div>
+        </div>
+        <div class="col-6">
+          <nav class="main-nav">
+            <a href="#" class="nav-link active">Trang chủ</a>
+            <a href="#men" class="nav-link">Thời Trang Nam</a>
+            <a href="#woment" class="nav-link">Thời Trang Nữ</a>
+            <a href="#" class="nav-link">Tin Tức</a>
+          </nav>
+        </div>
+        <div class="col-3">
+          <div class="search-box">
+            <input type="text" id="searchInput" placeholder="Tìm Kiếm ...">
+            <button class="btn-search" onclick="searchProducts()">Tìm Kiếm</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="container-fluid" style="margin-top: 20px; margin-bottom: 20px;">
+    <div class="row">
+      <div class="col-12">
+        <h1 class="section-title">THỜI TRANG NỮ</h1>
+      </div>
+    </div>
+    <div class="row" id="woment">
+    </div>
+  </div>
+
+  <div class="container-fluid" style="margin-top: 20px; margin-bottom: 20px;">
+    <div class="row">
+      <div class="col-12">
+        <h1 class="section-title">THỜI TRANG NAM</h1>
+      </div>
+    </div>
+    <div class="row" id="men">
+    </div>
+  </div>
+
+  <script src="./js/script.js"></script>
+</body>
+</html>

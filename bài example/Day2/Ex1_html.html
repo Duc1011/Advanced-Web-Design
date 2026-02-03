@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>BANG DIEM CUA EM</title>
+  <link rel="stylesheet" href="./bootstrap-4.0.0-alpha.6-dist/bootstrap-4.0.0-alpha.6-dist/css/bootstrap.min.css">
+  <script src="./bootstrap-4.0.0-alpha.6-dist/bootstrap-4.0.0-alpha.6-dist/js/bootstrap.min.js"></script>
+  <script src="./bootstrap-4.0.0-alpha.6-dist/bootstrap-4.0.0-alpha.6-dist/js/jquery.min.js"></script>
+  <link rel="stylesheet" href="Ex1_css.css" />
+</head>
+
+<body>
+  <div class="container">
+    <h1>BANG DIEM CUA EM</h1>
+
+    <div class="rowline">
+      <label for="text_1">Semester1:</label>
+      <input type="text" id="text_1" />
+    </div>
+
+    <div class="rowline">
+      <label for="text_2">Semester2:</label>
+      <input type="text" id="text_2" />
+    </div>
+
+    <div class="rowline">
+      <label for="select">Year:</label>
+      <select id="select">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+      </select>
+    </div>
+
+    <div class="rowline">
+      <label for="result">Summarise:</label>
+      <input type="text" id="result" disabled />
+    </div>
+
+    <p id="display"></p>
+
+    <div class="btn-row">
+      <input type="button" id="ok" value="OK" onclick="myFunction1()" />
+      <input type="button" id="cancel" value="Cancel" onclick="myFunction2()" />
+    </div>
+  </div>
+
+  <script src="Ex1_js.js"></script>
+</body>
+</html>
