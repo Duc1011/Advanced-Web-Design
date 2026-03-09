@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Travelcon - Đặt phòng</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <section class="section-box">
+        <h2 class="section-title">Book đi nào. Mãi bên nhau bạn nhé!</h2>
+        <p class="section-subtitle">
+          Top nơi ở sang chảnh đón hè đã sẵn sàng trên Travelcon. Book đi ngay nè.
+        </p>
+        <div class="hotels-grid" id="hotelsGrid">
+          <div class="loading-msg"> Đang tải dữ liệu...</div>
+        </div>
+      </section>
+
+      <section class="section-box">
+        <form id="addHotelForm">
+          <div class="mgmt-header">
+            <h3 class="mgmt-title">Quản lý phòng</h3>
+            <div class="mgmt-actions">
+              <button type="button" class="btn-show" id="btnShow">Hiển Thị</button>
+              <button type="submit" class="btn-add-new" id="btnAddNew">Thêm mới phòng </button>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label>Tên phòng</label>
+              <input class="form-input" type="text" id="inputName" placeholder="Tên phòng" />
+            </div>
+            <div class="form-group">
+              <label>Mô tả phòng</label>
+              <input class="form-input" type="text" id="inputType" placeholder="Mô tả phòng" />
+            </div>
+            <div class="form-group">
+              <label>Giá</label>
+              <input class="form-input" type="number" id="inputPrice" placeholder="Giá phòng" min="0" />
+            </div>
+            <div class="form-group img-group">
+              <button type="button" class="btn-choose-img" id="btnChooseImg">
+                🖼 Chọn<br />hình ảnh
+              </button>
+              <input type="file" id="fileInput" accept="image/*" style="display:none" />
+              <img id="imgPreview" class="img-preview" alt="Preview" />
+            </div>
+          </div>
+        </form>
+
+        <div class="hotel-table-wrap" id="hotelTableWrap">
+          <table class="hotel-table">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Ảnh</th>
+                <th>Tên phòng</th>
+                <th>Mô tả</th>
+                <th>Giá</th>
+                <th>Hành động</th>
+              </tr>
+            </thead>
+            <tbody id="hotelTableBody"></tbody>
+          </table>
+        </div>
+      </section>
+
+    </div>
+
+    <script src="mockApi.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
