@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculate Square Perimeter</title>
+</head>
+<body>
+    <h1>Calculate Square Perimeter</h1>
+    <form method="post" action="/calculator">
+        <label for="sideLength">Side Length</label>
+        <br>
+        <input type="number" name="sideLength" id="sideLength">
+        <br><br>
+        <button type="submit">Calculate</button>
+    </form>
+
+    <% if (parameter !== null && area !== null) { %>
+        <p>Nhập chiều dài cạnh: <%= parameter %></p>
+        <p>Diện tích hình vuông: <%= area %></p>
+    <% } else { %>
+        <p>Nhập chiều dài cạnh để tính diện tích.</p>
+    <% } %>
+</body>
+</html>
