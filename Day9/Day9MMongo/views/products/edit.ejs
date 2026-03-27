@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head><title><%= title %></title></head>
+<body>
+  <h1><%= title %></h1>
+  <form method="POST" action="/products/edit/<%= product._id %>">
+    <input name="name" value="<%= product.name %>" required><br>
+    <input name="price" value="<%= product.price %>" type="number" required><br>
+    <input name="category" value="<%= product.category %>" required><br>
+    <input name="stock" value="<%= product.stock %>" type="number"><br>
+    <textarea name="description"><%= product.description %></textarea><br>
+    <button type="submit">Cập nhật</button>
+  </form>
+</body>
+</html>

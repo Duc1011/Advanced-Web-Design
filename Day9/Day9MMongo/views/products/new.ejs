@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head><title><%= title %></title></head>
+<body>
+  <h1><%= title %></h1>
+  <form method="POST" action="/products/new">
+    <input name="name" placeholder="Tên sản phẩm" required><br>
+    <input name="price" placeholder="Giá" type="number" required><br>
+    <input name="category" placeholder="Loại" required><br>
+    <input name="stock" placeholder="Tồn kho" type="number"><br>
+    <textarea name="description" placeholder="Mô tả"></textarea><br>
+    <button type="submit">Lưu</button>
+  </form>
+</body>
+</html>

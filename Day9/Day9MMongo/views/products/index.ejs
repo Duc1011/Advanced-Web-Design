@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head><title><%= title %></title></head>
+<body>
+  <h1><%= title %></h1>
+  <a href="/products/new">➕ Thêm sản phẩm mới</a>
+  <table border="1" cellpadding="8">
+    <tr><th>Tên</th><th>Giá</th><th>Loại</th><th>Tồn kho</th><th>Hành động</th></tr>
+    <% products.forEach(p => { %>
+      <tr>
+        <td><a href="/products/<%= p._id %>"><%= p.name %></a></td>
+        <td><%= p.price %></td>
+        <td><%= p.category %></td>
+        <td><%= p.stock %></td>
+        <td>
+          <a href="/products/edit/<%= p._id %>">Sửa</a> |
+          <a href="/products/delete/<%= p._id %>" onclick="return confirm('Xóa?')">Xóa</a>
+        </td>
+      </tr>
+    <% }) %>
+  </table>
+</body>
+</html>
